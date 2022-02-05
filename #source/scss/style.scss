@@ -283,3 +283,219 @@ body {
         font-size: 14px;
     }
 }
+
+.about-us {
+    padding: 120px 0 200px 0;
+
+    text-align: center;
+
+    background-color: #F8FAFA;
+}
+
+.title {
+    padding-bottom: 5px;
+
+    font-weight: 700;
+    font-size: 38px;
+    color: #181919;
+}
+
+.subtitle {
+    padding-bottom: 140px;
+
+    font-family: 'Merriweather';
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: #5E5F5F;
+}
+
+.about-us__content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.content__slider {
+    position: relative;
+    flex: 0 0 50%;
+}
+
+.content__slider > input {
+	display: none;
+}
+
+.slider {
+    position: relative;
+
+    width: 480px;
+    height: 410px;
+
+    background-color: #ddd;
+}
+
+.slider__slides {
+    position: absolute;
+    top: -9%;
+    left: 9%;
+    z-index: 0;
+    width: 390px;
+    height: 480px;
+    box-shadow: 0px -11px 12px -3px #EFF0F2;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+.slide-one {
+    background: url("../../img/main/computer.jpg") 0 0/100% 100% no-repeat;
+}
+
+.slide-two {
+    background: url("../../img/main/computer.jpg") 0 0/100% 100% no-repeat;
+}
+
+.slide-three {
+    background: url("../../img/main/computer.jpg") 0 0/100% 100% no-repeat;
+}
+
+.slide-four {
+    background: url("../../img/main/computer.jpg") 0 0/100% 100% no-repeat;
+}
+
+.controls {
+    position: absolute;
+    top: 119%;
+    left: 37%;
+}
+
+.controls label {
+	position: relative;
+
+	display: inline-block;
+    width: 10px;
+	height: 10px;
+
+    background-color: #D0D0D0;
+    border-radius: 35%;
+
+    cursor: pointer;
+    &:not(:last-child) {
+        margin: 0 4px 0 0;
+    }
+}
+
+.controls label:hover, 
+#slide-one:checked ~ .controls label:nth-of-type(1),
+#slide-two:checked ~ .controls label:nth-of-type(2),
+#slide-three:checked ~ .controls label:nth-of-type(3), 
+#slide-four:checked ~ .controls label:nth-of-type(4) {
+	background: #71F6EB;
+}
+
+#slide-one:checked ~ .slider > .slide-one,
+#slide-two:checked ~ .slider > .slide-two,
+#slide-three:checked ~ .slider > .slide-three, 
+#slide-four:checked ~ .slider > .slide-four {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.content__description {
+    flex: 0 0 50%;
+    padding: 0 15px;
+
+    text-align: start;
+}
+.content__description-title {
+    padding-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Merriweather';
+    letter-spacing: 0.05em;
+    color: #4A4B4B;
+}
+.content__description-text {
+    font-size: 16px;
+    font-family: 'Raleway';
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+    color: #5E5F5F;
+    &:not(:last-child) {
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 1199px) {
+    .slider {
+        width: 440px;
+        height: 390px;
+    }
+    .slider__slides {
+        top: -7%;
+        width: 360px;
+        height: 455px;
+    }
+    .controls {
+        top: 110%;
+        left: 39%;
+    }
+}
+@media (max-width: 991px) {
+    .content__slider {
+        flex: 0 0 100%;
+    }
+    .slider {
+        margin: 0 auto 160px;
+    }
+    .controls {
+        top: 86%;
+        left: 47%;
+    }
+    .content__description {
+        flex: 0 0 100%;
+
+        text-align: center;
+    }
+}
+@media (max-width: 650px) {
+    .title {
+        font-size: 27px;
+    }
+    .subtitle {
+        font-size: 14px;
+        .about-us {
+            padding: 80px 0 100px 0;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .about-us {
+        padding: 100px 0 90px 0;
+    }
+    .subtitle {
+        line-height: 1.3;
+    }
+    .slider {
+        width: 288px;
+        height: 330px;
+    }
+    .slider__slides {
+        width: 234px;
+        height: 382px;
+    }
+    .controls {
+        top: 81%;
+        left: 42%;
+    }
+    .content__description-title {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    .content__description-text {
+        font-size: 14px;
+    }
+}
+// ---------------------------------------------------------------
+
+.featured-works {
+    padding: 120px 0 125px 0;
+
+    text-align: center;
+}
