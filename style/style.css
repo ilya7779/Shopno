@@ -587,3 +587,201 @@ body {
     padding: 70px 0 100px 0;
   }
 }
+.our-services {
+  padding: 125px 0;
+  text-align: center;
+}
+
+.our-services__columns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 370px 11px 370px 11px 370px;
+  -ms-grid-columns: 1fr 11px 1fr 11px 1fr 11px 1fr 11px 1fr 11px 1fr 11px 1fr 11px 1fr 11px 1fr 11px 1fr 11px 1fr 11px 1fr;
+      grid-template: repeat(3, 370px)/repeat(12, 1fr);
+  gap: 11px;
+}
+
+.our-services__column {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+  -ms-grid-columns: 1fr;
+      grid-template: auto 1fr auto/1fr;
+  padding: 155px 95px 55px 60px;
+  text-align: left;
+}
+
+.our-services__column-one {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1/8;
+  background: url("../../img/main/our-services/Rectangle1.jpg") 0 0/100% 100% no-repeat;
+}
+
+.our-services__column-two {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 5;
+  grid-column: 8/13;
+  background: url("../../img/main/our-services/Rectangle2.jpg") 0 0/100% 100% no-repeat;
+}
+
+.our-services__column-three {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1/8;
+  background: url("../../img/main/our-services/Rectangle1.jpg") 0 0/100% 100% no-repeat;
+}
+
+.our-services__column-four {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 5;
+  grid-column: 8/13;
+  background: url("../../img/main/our-services/Rectangle4.jpg") 0 0/100% 100% no-repeat;
+}
+
+.our-services__column-five {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1/6;
+  background: url("../../img/main/our-services/Rectangle5.jpg") 0 0/100% 100% no-repeat;
+}
+
+.our-services__column-six {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 7;
+  grid-column: 6/13;
+  background: url("../../img/main/our-services/Rectangle6.jpg") 0 0/100% 100% no-repeat;
+}
+
+.our-services__column-title {
+  padding-bottom: 25px;
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: 20px;
+  color: #F7F7F7;
+}
+
+.our-services__column-text {
+  font-family: "Raleway";
+  font-size: 16px;
+  line-height: 1.4;
+  color: #E6E6E6;
+}
+
+.our-services__column-link {
+  font-family: "Raleway";
+  font-weight: 500;
+  color: #E6E6E6;
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #70F5EA;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr minmax(20px, auto);
+  -ms-grid-columns: 1fr;
+      grid-template: auto 1fr minmax(20px, auto)/1fr;
+  height: 100%;
+}
+
+.popup__content-big {
+  padding: 55px 110px 0 55px;
+}
+
+.popup__content-small {
+  padding: 55px 50px 0 55px;
+}
+
+.popup__title {
+  padding-bottom: 32px;
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: 20px;
+  color: #132928;
+}
+
+.popup__text {
+  font-family: "Raleway";
+  line-height: 1.4;
+  color: #132928;
+}
+
+.popup__close {
+  padding-bottom: 30px;
+  font-size: 35px;
+  color: #44948D;
+}
+
+@media (max-width: 991px) {
+  .our-services__column {
+    padding: 60px 50px 55px 30px;
+  }
+
+  .popup__content-big {
+    padding: 40px 50px 0 45px;
+  }
+
+  .popup__content-small {
+    padding: 40px 20px 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .our-services__columns {
+    -ms-grid-rows: (370px)[6];
+    -ms-grid-columns: 1fr;
+        grid-template: repeat(6, 370px)/1fr;
+  }
+
+  .our-services__column {
+    padding-top: 100px;
+  }
+
+  .our-services__column-one,
+.our-services__column-two,
+.our-services__column-three,
+.our-services__column-four,
+.our-services__column-five,
+.our-services__column-six {
+    grid-row: auto;
+    grid-column: auto;
+  }
+}
+@media (max-width: 480px) {
+  .our-services__column {
+    padding: 70px 50px 40px 30px;
+  }
+}
