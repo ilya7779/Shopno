@@ -785,3 +785,162 @@ body {
     padding: 70px 50px 40px 30px;
   }
 }
+.small-team {
+  text-align: center;
+}
+
+.small-team__photos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 14px 1fr;
+  -ms-grid-columns: minmax(auto, 370px) 14px minmax(auto, 370px) 14px minmax(auto, 370px);
+      grid-template: 1fr 1fr/repeat(3, minmax(auto, 370px));
+  gap: 14px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.small-team__photo {
+  position: relative;
+  width: 100%;
+  height: 440px;
+}
+.small-team__photo .photo__portrait {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photo__popup-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-photo {
+  position: absolute;
+  bottom: 15px;
+  left: 17px;
+  width: 90%;
+  height: 50%;
+  background-color: #70F5EA;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup-photo:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-photo__area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-photo__triangle {
+  position: absolute;
+  top: -9px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: #70F5EA;
+  -webkit-transform: scale(1, 2) rotate(45deg);
+          transform: scale(1, 2) rotate(45deg);
+}
+
+.popup-photo__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  padding: 40px 35px;
+  text-align: left;
+}
+
+.popup-photo__title {
+  margin-bottom: 20px;
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: 19px;
+  color: #2A3131;
+}
+.popup-photo__title span {
+  font-weight: normal;
+  font-size: 14px;
+  color: #767776;
+}
+
+.popup-photo__text {
+  font-family: "Raleway";
+  font-size: 16px;
+  line-height: 1.3;
+  color: #2A3131;
+}
+
+.popup-photo__social-networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popup-photo__social-network {
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+.popup-photo__social-network:not(:last-child) {
+  margin-right: 10px;
+}
+.popup-photo__social-network img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .popup-photo__triangle {
+    top: -5px;
+    left: 25px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .popup-photo__content {
+    padding: 20px 20px;
+  }
+}
+@media (max-width: 767px) {
+  .small-team__photos {
+    -ms-grid-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: (minmax(auto, 370px))[2];
+        grid-template: 1fr 1fr 1fr/repeat(2, minmax(auto, 370px));
+  }
+
+  .popup-photo__title {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .small-team__photos {
+    -ms-grid-rows: (1fr)[4];
+    -ms-grid-columns: minmax(auto, 370px);
+        grid-template: repeat(4, 1fr)/minmax(auto, 370px);
+  }
+}
